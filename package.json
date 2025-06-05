@@ -1,0 +1,31 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node src/server.js"
+  },
+  "author": "qtruong02it",
+  "license": "ISC",
+  "description": "\"backend node js\"",
+  "dependencies": {
+    "body-parser": "2.2.0",
+    "dotenv": "16.5.0",
+    "ejs": "^3.1.5",
+    "express": "5.1.0",
+    "mysql2": "^3.14.1",
+    "sequelize": "^6.37.7"
+  },
+  "keywords": [
+    "fullstack",
+    "nodejs"
+  ],
+  "devDependencies": {
+    "@babel/core": "7.27.4",
+    "@babel/node": "7.27.1",
+    "@babel/preset-env": "7.27.2",
+    "nodemon": "^3.1.10",
+    "sequelize-cli": "^6.6.3"
+  }
+}
