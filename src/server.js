@@ -1,14 +1,22 @@
 import express from "express";
-import bodyParser, { urlencoded } from "body-parser";
+import bodyParser from "body-parser";
 import viewEngine from "./config/viewEngine";
 import initwebRouters from './route/web';
 import connectDB from './config/connectDB';
+import cors from 'cors';
 require('dotenv').config();
 
 let app = express();
 
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(urlencoded({ extended: true }));
+// app.use(cors({ origin: true }));
+const PORT = process.env.PORT || 8081;
+
+app.use(cors({
+    origin: 'http://localhost:3000', // nơi React đang chạy
+    credentials: true
+}));
 
 
 viewEngine(app);
